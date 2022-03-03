@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fooderlich/circleImage.dart';
 
-class Authorcard extends StatelessWidget {
+class Authorcard extends StatefulWidget {
   final String authorName;
   final title;
   final ImageProvider? imageProvider;
@@ -14,6 +14,12 @@ class Authorcard extends StatelessWidget {
       : super(key: key);
 
   @override
+  _AuthorcardState createState() => _AuthorcardState();
+}
+
+class _AuthorcardState extends State<Authorcard> {
+  bool _isfavorite = true;
+  @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(16),
@@ -23,7 +29,7 @@ class Authorcard extends StatelessWidget {
           Row(
             children: [
               CircleImage(
-                imageProvider: imageProvider,
+                imageProvider: widget.imageProvider,
                 imageRadius: 28,
               ),
               SizedBox(
@@ -33,13 +39,13 @@ class Authorcard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    authorName,
+                    widget.authorName,
                     style: TextStyle(
                         fontSize: 25,
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
                   ),
-                  Text(title,
+                  Text(widget.title,
                       style: TextStyle(
                         fontSize: 15,
                         color: Colors.black,
@@ -50,12 +56,15 @@ class Authorcard extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
+              setState(() {
+                _isfavorite = !_isfavorite;
+              });
               const snackBar = SnackBar(content: Text('Favorite pressed'));
               ScaffoldMessenger.of(context).showSnackBar(snackBar);
             },
-            icon: Icon(Icons.favorite_border),
+            icon: Icon(_isfavorite ? Icons.favorite : Icons.favorite_border),
             iconSize: 30,
-            color: Colors.grey[400],
+            color: Colors.red[400],
           )
         ],
       ),
