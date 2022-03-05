@@ -41,7 +41,7 @@ class Card1 extends StatelessWidget {
         constraints: BoxConstraints.expand(height: 450, width: 350),
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/mag1.png'), fit: BoxFit.cover),
+                image: AssetImage('assets/magazine_pics/mag1.png'), fit: BoxFit.cover),
             borderRadius: BorderRadius.all(Radius.circular(10))),
       ),
     );

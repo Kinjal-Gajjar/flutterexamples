@@ -18,7 +18,7 @@ class Authorcard extends StatefulWidget {
 }
 
 class _AuthorcardState extends State<Authorcard> {
-  bool _isfavorite = true;
+  bool _isfavorite = false;
   @override
   Widget build(BuildContext context) {
     return Container(

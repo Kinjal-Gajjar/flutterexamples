@@ -16,13 +16,14 @@ class Card2 extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             image: DecorationImage(
-                image: AssetImage('assets/mag5.png'), fit: BoxFit.cover)),
+                image: AssetImage('assets/magazine_pics/mag2.png'),
+                fit: BoxFit.cover)),
         child: Column(
           children: [
             const Authorcard(
               authorName: 'Mike Katz',
               title: 'Smoothie Conmoisseur',
-              imageProvider: AssetImage('assets/author_katz.jpeg'),
+              imageProvider: AssetImage('assets/profile_pics/person_katz.jpeg'),
             ),
             Expanded(
               child: Stack(

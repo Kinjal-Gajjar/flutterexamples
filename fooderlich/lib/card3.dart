@@ -13,7 +13,8 @@ class Card3 extends StatelessWidget {
             color: Colors.black.withOpacity(0.6),
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
             image: DecorationImage(
-                image: AssetImage('assets/mag2.png'), fit: BoxFit.cover)),
+                image: AssetImage('assets/magazine_pics/mag3.png'),
+                fit: BoxFit.cover)),
         child: Stack(
           children: [
             Column(
