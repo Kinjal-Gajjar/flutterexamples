@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fooderlich/authorcard.dart';
+
+import 'authorcard.dart';
 
 class Card2 extends StatelessWidget {
   const Card2({Key? key}) : super(key: key);

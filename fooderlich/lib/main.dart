@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'home.dart';
+import 'components/home.dart';
 
 void main() => runApp(FooderLich());
 
